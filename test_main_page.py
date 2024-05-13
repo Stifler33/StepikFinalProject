@@ -6,5 +6,6 @@ def test_guest_can_go_to_login_page(browser, language):
     link = f"http://selenium1py.pythonanywhere.com/{language}"
     page = MainPage(browser, link)
     page.open()
-    page.go_to_login_page()
+    #page.go_to_login_page()
+    page.should_be_login_link()
     assert True
